@@ -1,7 +1,7 @@
 import React from 'react';
 
 function ListItem(props) {
-    return <p>List Item</p>
+return <p>{props.todo.text}</p>
 }
 
 export default ListItem;

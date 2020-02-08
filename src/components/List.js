@@ -4,8 +4,9 @@ import ListItem from './ListItem';
 function List(props) {
     return (
         <React.Fragment>
-            <ListItem />
-            <ListItem />
+            {props.todos.map((todo) => {
+                return <ListItem todo={todo} key={todo.timeStamp}/>
+            })}
         </React.Fragment>
     )
 }

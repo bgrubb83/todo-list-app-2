@@ -27,7 +27,7 @@ class TodoInput extends React.Component {
                         value={this.state.todoText}
                         onChange={this.handleChange}
                     />
-                    <button type="submit">Add</button>
+                    <button type="submit" disabled={this.state.todoText.length === 0}>Add</button>
                 </form>
             </React.Fragment>
         );

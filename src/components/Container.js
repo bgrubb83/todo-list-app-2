@@ -14,8 +14,9 @@ class Container extends React.Component {
         };
     }
 
-    addTodo = (todoText) => {
-        const newTodo = { text: todoText, timeStamp: Date.now() }
+    addTodo = (event, todoText) => {
+        event.preventDefault(); 
+        const newTodo = { text: todoText, timeStamp: Date.now().toString() }
         const newTodos = [ ...this.state.todos, newTodo ];
         this.setState( { todos: newTodos } );
     }

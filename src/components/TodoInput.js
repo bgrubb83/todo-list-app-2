@@ -1,12 +1,12 @@
 import React from 'react';
 
-function SearchBar(props) {
+function TodoInput(props) {
     return (
         <React.Fragment>
-        <p>Search Bar</p>
+        <p>Todo Input</p>
         <button onClick={() => { props.addTodo('new one') }}>Add</button>
         </React.Fragment>
     );
 }
 
-export default SearchBar;
+export default TodoInput;

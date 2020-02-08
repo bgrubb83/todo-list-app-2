@@ -1,8 +1,8 @@
 import React from 'react';
-import SearchBar from '../components/SearchBar';
+import TodoInput from './TodoInput';
 
 function HeaderBar(props) {
-    return <SearchBar addTodo={props.addTodo} />;
+    return <TodoInput addTodo={props.addTodo} />;
 }
 
 export default HeaderBar;

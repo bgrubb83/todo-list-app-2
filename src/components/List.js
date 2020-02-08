@@ -2,6 +2,7 @@ import React from 'react';
 import ListItem from './ListItem';
 
 function List(props) {
+    console.log('List props', props)
     return (
         <React.Fragment>
             {props.todos.map((todo) => {

@@ -14,10 +14,18 @@ class Container extends React.Component {
         };
     }
 
+    addTodo = (todoText) => {
+        const newTodo = { text: todoText, timeStamp: Date.now() }
+        const newTodos = [ ...this.state.todos, newTodo ];
+        this.setState( { todos: newTodos } );
+    }
+
     render() {
         return (
             <React.Fragment>
-                <HeaderBar />
+                <HeaderBar
+                    addTodo={this.addTodo}
+                />
                 <List
                     todos={this.state.todos}
                 />

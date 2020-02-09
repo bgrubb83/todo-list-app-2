@@ -26,6 +26,7 @@ class TodoInput extends React.Component {
                         type="text"
                         value={this.state.todoText}
                         onChange={this.handleChange}
+                        placeholder="What you wanna do? 🤷"
                     />
                     <button type="submit" disabled={this.state.todoText.length === 0}>Add</button>
                 </form>

@@ -18,6 +18,13 @@ class Container extends React.Component {
         this.setState( { todos: newTodos } );
     }
 
+    deleteTodo = (timeStamp) => {
+        const newTodos = [ ...this.state.todos ].filter((todo) => {
+            return todo.timeStamp && todo.timeStamp !== timeStamp;
+        })
+        this.setState({ todos: newTodos });
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -26,6 +33,7 @@ class Container extends React.Component {
                 />
                 <List
                     todos={this.state.todos}
+                    deleteTodo={this.deleteTodo}
                 />
                 <Footer />
             </React.Fragment>
